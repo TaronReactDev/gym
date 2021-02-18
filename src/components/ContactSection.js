@@ -1,8 +1,17 @@
 import React from 'react'
 import "./style.scss";
+import Button from '@material-ui/core/Button';
+import { makeStyles } from '@material-ui/core/styles';
+import SendIcon from '@material-ui/icons/Send';
+const useStyles = makeStyles((theme) => ({
+  button: {
+    margin: theme.spacing(1),
+  },
+}));
 
 
 export default function ContactSection() {
+    const classes = useStyles();
     return (
         <div className="mainDivContactSection">
         <div className="contactSection">
@@ -14,7 +23,15 @@ export default function ContactSection() {
            <input placeholder="Email"  id="Email"  type="text"></input>
            <label for="Message"> Message</label>
            <input placeholder="Type a message"  id="Message"  type="text"></input>
-           <button>send</button>
+           <div className={classes.root}>
+           <Button
+        variant="contained"
+        color="primary"
+        className={classes.button}
+        endIcon={<SendIcon/>}
+      >
+        Send
+      </Button></div>
         </div></div>
     )
 }

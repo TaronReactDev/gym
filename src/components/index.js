@@ -6,6 +6,11 @@ import PhoneForwardedIcon from "@material-ui/icons/PhoneForwarded";
 import DraftsIcon from "@material-ui/icons/Drafts";
 import Trainers from "../components/Trainers"
 import ContactUs from "../components/ContactSection"
+import "aos/dist/aos.css";
+
+import AOS from "aos";
+
+AOS.init({ delay: 500, duration: 2000 })
 
 export default function index() {
   return (
@@ -21,7 +26,7 @@ export default function index() {
           </div>{" "}
         </div>
 
-        <div className="spanDownloadBooklet">
+        <div className="spanDownloadBooklet"  data-aos="flip-left">
           {" "}<h2>FEEL THE POWER</h2>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed
           doloremque, nam consequuntur non quos praesentium, quidem quod vitae
